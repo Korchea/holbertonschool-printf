@@ -7,7 +7,11 @@
 #include <string.h>
 
 int _printf(const char *format, ...);
-
+/**
+ * struct format - struct format
+ * @c: format
+ * @f: pointer to a function
+ */
 typedef struct format
 {
 	char c;

@@ -45,6 +45,9 @@ int casestring(va_list ap)
 	unsigned int m;
 	char *s = va_arg(ap, char *);
 
+	if (s == NULL)
+		s = "(null)";
+
 	for (m = 0; m < strlen(s); m++)
 		write(1, &s[m], 1);
 
@@ -64,6 +67,7 @@ int casepersent(va_list ap __attribute__((unused)))
 	write(1, &c, 1);
 	return (1);
 }
+
 /**
  * _printf - 'Prints everything you pass.'
  * @format: Is the string that gonna be printed.
@@ -87,14 +91,20 @@ int _printf(const char *format, ...)
 		j = 0;
 		if (format[i] == '%')
 		{
-			i++;
 			while (form[j].c != 0)
 			{
-				if (format[i] == form[j].c)
+				if (format[i + 1] == form[j].c)
 				{
+					i++;
 					k += form[j].f(ap);
+					break;
 				}
 				j++;
+			}
+			if (form[j].c == 0)
+			{
+				other(format[i], format[i + 1]);
+				k++;
 			}
 		}
 		else
