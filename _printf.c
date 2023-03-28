@@ -90,11 +90,11 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (format[i])
 	{
-		j = 0;
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
+			j = 0;
 			while (form[j].c != 0)
 			{
 				if (format[i + 1] == form[j].c)
