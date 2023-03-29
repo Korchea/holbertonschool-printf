@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * other - 'Print the new lines and commond chars.'
@@ -54,12 +55,36 @@ int casestring(va_list ap)
 	return (strlen(s));
 }
 
+void print_int(int n, int *count)
+{
+	char neg = '-', num;
+
+	if (n < 0)
+	{
+		write(1, &neg, 1);
+		n = -n;
+	}
+	if (n / 10)
+		print_int(n / 10, count);
+	num = n % 10 + 48;
+	write(1, &num, 1);
+	(*count)++;
+}
+
+int caseint(va_list ap)
+{
+	int i = va_arg(ap, int);
+	int count = 0;
+
+	print_int(i, &count);
+	return (count);
+}
+
 /**
  * casepersent - 'Prints in case persent.'
  * @ap: Variable in list.
- * Return: Count of prints.
+ * Return: Coun
  */
-
 int casepersent(va_list ap __attribute__((unused)))
 {
 	char c = '%';
@@ -82,6 +107,8 @@ int _printf(const char *format, ...)
 		{'c', casechar},
 		{'s', casestring},
 		{'%', casepersent},
+		{'d', caseint},
+		{'i', caseint},
 		{0, NULL}
 	};
 
