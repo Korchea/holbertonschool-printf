@@ -14,6 +14,7 @@ void print_int(int, int *);
 int caseint(va_list);
 int casepercent(va_list);
 unsigned int _strlen(char *);
+unsigned int get_format(const char *format, va_list ap, unsigned int *i);
 
 /**
  * struct format - struct format

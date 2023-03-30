@@ -40,3 +40,33 @@ unsigned int _strlen(char *s)
 	}
 	return (0);
 }
+
+unsigned int get_format(const char *format, va_list ap, unsigned int *i)
+{
+	unsigned int j = 0, count = 0;
+	format_t form[] = {
+		{'c', casechar},
+		{'s', casestring},
+		{'%', casepercent},
+		{'d', caseint},
+		{'i', caseint},
+		{0, NULL}
+	};
+
+	while (form[j].c != 0)
+	{
+		if (format[i + 1] == form[j].c)
+		{
+			*(i)++;
+			count += form[j].f(ap);
+			break;
+		}
+		j++;
+	}
+	if (form[j].c == 0)
+	{
+		other(format[i], format[i + 1]);
+		count++;
+	}
+	return (count);
+}

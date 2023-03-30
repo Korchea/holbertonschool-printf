@@ -9,15 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	unsigned int i = 0, j, k = 0;
-	format_t form[] = {
-		{'c', casechar},
-		{'s', casestring},
-		{'%', casepercent},
-		{'d', caseint},
-		{'i', caseint},
-		{0, NULL}
-	};
+	unsigned int i = 0, count = 0;
 
 	va_start(ap, format);
 	if (format == NULL)
@@ -28,30 +20,15 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			j = 0;
-			while (form[j].c != 0)
-			{
-				if (format[i + 1] == form[j].c)
-				{
-					i++;
-					k += form[j].f(ap);
-					break;
-				}
-				j++;
-			}
-			if (form[j].c == 0)
-			{
-				other(format[i], format[i + 1]);
-				k++;
-			}
+			count += get_format(format, ap, &i);
 		}
 		else
 		{
 			other(format[i], format[i + 1]);
-			k++;
+			count++;
 		}
 		i++;
 	}
 	va_end(ap);
-	return (k);
+	return (count);
 }

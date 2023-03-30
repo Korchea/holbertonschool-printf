@@ -42,14 +42,14 @@ int casechar(va_list ap)
 
 int casestring(va_list ap)
 {
-	unsigned int m;
+	unsigned int i;
 	char *s = va_arg(ap, char *);
 
 	if (s == NULL)
 		s = "(null)";
 
-	for (m = 0; m < _strlen(s); m++)
-		write(1, &s[m], 1);
+	for (i = 0; i < _strlen(s); i++)
+		write(1, &s[i], 1);
 
 	return (_strlen(s));
 }
@@ -57,7 +57,7 @@ int casestring(va_list ap)
 /**
  * casepersent - 'Prints in case persent.'
  * @ap: Variable in list.
- * Return: Coun
+ * Return: Count of prints.
  */
 int casepercent(va_list ap __attribute__((unused)))
 {
