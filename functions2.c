@@ -5,7 +5,7 @@
  * @n: .
  * @count: .
  */
-void print_int(int n, int *count)
+void print_int(long int n, int *count)
 {
 	char neg = '-', num;
 
@@ -13,6 +13,7 @@ void print_int(int n, int *count)
 	{
 		write(1, &neg, 1);
 		n = -n;
+		(*count)++;
 	}
 	if (n / 10)
 		print_int(n / 10, count);

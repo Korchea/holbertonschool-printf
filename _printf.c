@@ -7,9 +7,9 @@
  * @a: .
  * @count: .
  */
-void get_format(const char *format, va_list ap, int a, int *count)
+void get_format(const char *format, va_list ap, int i, int *count)
 {
-	int i = a, j = 0;
+	int j = 0;
 	format_t form[] = {
 		{'c', casechar},
 		{'s', casestring},
@@ -32,7 +32,7 @@ void get_format(const char *format, va_list ap, int a, int *count)
 	{
 		other(format[i], format[i + 1]);
 		other(format[i + 1], format[i + 2]);
-		(*count)++;
+		(*count) += 2;
 	}
 }
 

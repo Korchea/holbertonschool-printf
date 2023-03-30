@@ -10,7 +10,7 @@ int _printf(const char *format, ...);
 void other(char, char);
 int casechar(va_list);
 int casestring(va_list);
-void print_int(int, int *);
+void print_int(long int, int *);
 int caseint(va_list);
 int casepercent(va_list);
 unsigned int _strlen(char *);
