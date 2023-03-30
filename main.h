@@ -4,9 +4,17 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <string.h>
+#include <stdlib.h>
 
 int _printf(const char *format, ...);
+void other(char, char);
+int casechar(va_list);
+int casestring(va_list);
+void print_int(int, int *);
+int caseint(va_list);
+int casepercent(va_list);
+unsigned int _strlen(char *);
+
 /**
  * struct format - struct format
  * @c: format
