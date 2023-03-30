@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_int - .
+ * @n: .
+ * @count: .
+ */
 void print_int(int n, int *count)
 {
 	char neg = '-', num;
@@ -16,6 +21,11 @@ void print_int(int n, int *count)
 	(*count)++;
 }
 
+/**
+ * caseint - .
+ * @ap: .
+ * Return: .
+ */
 int caseint(va_list ap)
 {
 	int i = va_arg(ap, int);
@@ -39,34 +49,4 @@ unsigned int _strlen(char *s)
 		return (1 + _strlen(s + 1));
 	}
 	return (0);
-}
-
-unsigned int get_format(const char *format, va_list ap, unsigned int *i)
-{
-	unsigned int j = 0, count = 0;
-	format_t form[] = {
-		{'c', casechar},
-		{'s', casestring},
-		{'%', casepercent},
-		{'d', caseint},
-		{'i', caseint},
-		{0, NULL}
-	};
-
-	while (form[j].c != 0)
-	{
-		if (format[i + 1] == form[j].c)
-		{
-			*(i)++;
-			count += form[j].f(ap);
-			break;
-		}
-		j++;
-	}
-	if (form[j].c == 0)
-	{
-		other(format[i], format[i + 1]);
-		count++;
-	}
-	return (count);
 }

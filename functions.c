@@ -55,7 +55,7 @@ int casestring(va_list ap)
 }
 
 /**
- * casepersent - 'Prints in case persent.'
+ * casepercent - 'Prints in case persent.'
  * @ap: Variable in list.
  * Return: Count of prints.
  */
