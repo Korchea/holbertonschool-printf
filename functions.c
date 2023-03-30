@@ -1,29 +1,9 @@
 #include "main.h"
 
 /**
- * other - 'Print the new lines and commond chars.'
- * @b: Is a char.
- * @c: Is the next char.
- */
-
-void other(char b, char c)
-{
-	char nl = '\n';
-
-	if (b == 92 && c == 110)
-	{
-		write(1, &nl, 1);
-	}
-	else
-	{
-		write(1, &b, 1);
-	}
-}
-
-/**
  * casechar - 'Prints in case char.'
  * @ap: Variable in list.
- * Return: Count of prints.
+ * Return: Count of printed characters.
  */
 
 int casechar(va_list ap)
@@ -37,7 +17,7 @@ int casechar(va_list ap)
 /**
  * casestring - 'Prints in case string.'
  * @ap: Variable in list.
- * Return: Count of prints.
+ * Return: Count of printed characters.
  */
 
 int casestring(va_list ap)
@@ -55,9 +35,9 @@ int casestring(va_list ap)
 }
 
 /**
- * casepercent - 'Prints in case persent.'
+ * casepercent - 'Prints in case percent.'
  * @ap: Variable in list.
- * Return: Count of prints.
+ * Return: Count of printed characters.
  */
 int casepercent(va_list ap __attribute__((unused)))
 {
