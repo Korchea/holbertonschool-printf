@@ -4,10 +4,10 @@ In this variadic function we replicate a printf function. It must print a string
 
 We have five conversion specifiers, those are the %c, %s, %%, %d and %i.
 | Conversion specifier | Description					|
-|-----|:---------------------------------------------------------------:|
+|-----|:---------------------------------------------------------------|
 | `%c` | It represent a variable of type char.				|
 | `%s` | It represent a variable of type `char *`, commonly called string. |
-| `%%` | It is used to remplace it whit a '%'.				|
+| `%%` | It is used to remplace it with a '%'.				|
 | `%d` | It represent a variable of type int in decimal.		|
 | `%i` | It represent a variable of type int.				|
 
