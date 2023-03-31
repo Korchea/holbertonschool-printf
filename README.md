@@ -23,7 +23,7 @@ In this project we use eigth functions, those functions are _printf, get_format,
 
 ### Diferent limit cases of the function:
 ```
-*Input:*
+**Input:**
 _printf(NULL);
 *Output:*
 ```
