@@ -1,14 +1,14 @@
-#_printf
+# _printf
 
 In this variadic function we replicate a printf function. It must print a string that we give to the function and recognice conversion specifiers, we use that conversion specifiers to detect and insert diferent types of variables.
 
-We have five conversion specifiers, those are the `%c, %s, %%, %d and %i.`
-|:---|:-----------------------------------------------------------------|
-|%c: |It represent a variable of type char.				|
-|%s: |It represent a variable of type char *, commonly called string.	|
-|%%: |It is used to remplace it whit a '%'.				|
-|%d: |It represent a variable of type int in decimal.			|
-|%i: |It represent a variable of type int.				|
+We have five conversion specifiers, those are the %c, %s, %%, %d and %i.
+|-----|:---------------------------------------------------------------:|
+| %c: | It represent a variable of type char.				|
+| %s: | It represent a variable of type char *, commonly called string.	|
+| %%: | It is used to remplace it whit a '%'.				|
+| %d: | It represent a variable of type int in decimal.			|
+| %i: | It represent a variable of type int.				|
 
 In this project we use eigth functions, those functions are _printf, get_format, _strlen, caseint, print_int, casechar, casestring and casepercent.
 - @_printf: It is our principal function, here we recive the format of all the function and the other variables with the ellipsis. This function creates the list of the variables given in the ellipsis, traverses the string format, look for the conversion specifiers and prints the string format, if it recognise a % in format it call the functon get_format and it returns the number of characters printed.
