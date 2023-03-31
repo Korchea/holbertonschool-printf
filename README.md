@@ -2,7 +2,7 @@
 
 In this variadic function we replicate a printf function. It must print a string that we give to the function and recognice conversion specifiers, we use that conversion specifiers to detect and insert diferent types of variables.
 
-We have five conversion specifiers, those are the %c, %s, %%, %d and %i.
+| We have five conversion specifiers, those are the %c, %s, %%, %d and %i. |
 |-----|:---------------------------------------------------------------:|
 | %c: | It represent a variable of type char.				|
 | %s: | It represent a variable of type char *, commonly called string.	|
