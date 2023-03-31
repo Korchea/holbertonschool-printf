@@ -56,8 +56,14 @@ Input:
 _printf("This is a char %c\n", 'H');
 Output:
 This is a char H
-````
+```
+```
 Input:
+_printf("%% % \n");
+Output:
+% %
+```
+
 ### To use that function we need to:
 - Clone the repository.
 - Create a main.c to call the function.
