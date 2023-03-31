@@ -22,37 +22,37 @@ In this project we use eigth functions, those functions are _printf, get_format,
 - `unsigned int _strlen(char *s)`: In this function we return the length of a string.
 
 ### Diferent limit cases of the function:
-Input:
 ```
+Input:
 _printf(NULL);
 Output:
 ```
-Input:
 ```
+Input:
 _printf("Let´s try to printf a simple sentence.");
 Output:
 Let´s try to printf a simple sentence.
 ```
-Input:
 ```
+Input:
 _printf("%D\n", INT_MIN);
 Output:
 -2147483648
 ```
-Input:
 ```
+Input:
 _printf("Hi, %s\n", "Betty");
 Output:
 Hi, Betty
 ```
-Input:
 ```
+Input:
 _printf("If you %s\n", NULL);
 Output:
 If you (null)
 ```
-Input:
 ```
+Input:
 _printf("This is a char %c\n", 'H');
 Output:
 This is a char H
