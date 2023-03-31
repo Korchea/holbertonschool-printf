@@ -23,41 +23,41 @@ In this project we use eigth functions, those functions are _printf, get_format,
 
 ### Diferent limit cases of the function:
 ```
-Input:
+*Input:*
 _printf(NULL);
-Output:
+*Output:*
 ```
 ```
-Input:
+*Input:*
 _printf("Let´s try to printf a simple sentence.");
-Output:
+*Output:*
 Let´s try to printf a simple sentence.
 ```
 ```
-Input:
+*Input:*
 _printf("%D\n", INT_MIN);
-Output:
+*Output:*
 -2147483648
 ```
 ```
-Input:
+*Input:*
 _printf("Hi, %s\n", "Betty");
-Output:
+*Output:*
 Hi, Betty
 ```
 ```
-Input:
+*Input:*
 _printf("If you %s\n", NULL);
-Output:
+*Output:*
 If you (null)
 ```
 ```
-Input:
+*Input:*
 _printf("This is a char %c\n", 'H');
-Output:
+*Output:*
 This is a char H
 ````
-Input:
+*Input:*
 ### To use that function we need to:
 - Clone the repository.
 - Create a main.c to call the function.
