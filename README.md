@@ -16,12 +16,12 @@ In this project we use eigth functions, those functions are _printf, get_format,
 - `void get_format(const char *format, va_list ap, int i, int *count)`: This function create a structure of chars and functions, look up for the conversion specifiers in the structure and if it find something it call to other function, those functions are casechar, casestring, casepercent and caseint.
 - `int casechar(va_list ap)`: In this function we print the char who is in the list and return 1 who is the number of prints.
 - `int casestring(va_list ap)`: In this function we print the string who is in the list and return the length of the string using the function _strlen.
-- `int casepercent(va_list ap __attribute__((unused)))`: In this function we print the char '%' and return 1 who is the number of prints, we use te attribute unused because we make all the functions of the structure with the same format and we don´t use the list.
+- `int casepercent(va_list ap __attribute__((unused)))`: In this function we print the char '%' and return 1 who is the number of prints, we use the attribute unused because we make all the functions of the structure with the same format and we don´t use the list.
 - `int caseint(va_list ap)`: In this function we recive an int from the list and send it to the function print_int, it returns the number of digits of the int.
-- `void print_int(long int n, int *count)`: In this function we print the integer and if it is less than 0 then print a '-'.
+- `void print_int(long int n, int *count)`: In this function we print the integer and if it is less than 0 first print a '-'.
 - `unsigned int _strlen(char *s)`: In this function we return the length of a string.
 
-### Diferent limit cases of the function:
+### Different limit cases of the function:
 ```
 Input:
 _printf(NULL);
@@ -67,12 +67,12 @@ Output:
 ### To use that function we need to:
 - Clone the repository.
 - Create a main.c to call the function.
-- Compile all whit the command `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c`.
+- Compile all with the command `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c`.
 - Enjoy.
 
 #### If you need some help you can ask to the creators: 
-- @Gabriel Acosta: 6333@holbertonstudents.com GitHub: https://github.com/GabiAcosta
-- @Guillermo Vega: 6334@holbertonstudents.com GitHub: https://github.com/Korchea
+- 6333@holbertonstudents.com GitHub: [GabiAcosta](https://github.com/GabiAcosta)
+- 6334@holbertonstudents.com GitHub: [Korchea](https://github.com/Korchea)
 
 #### Autors:
 - Gabriel Acosta - Holberton School Montevideo, Cohort 20.
